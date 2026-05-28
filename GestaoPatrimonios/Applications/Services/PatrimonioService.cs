@@ -31,7 +31,9 @@ namespace GestaoPatrimonios.Applications.Services
                 Valor = patrimonio.Valor,
                 Imagem = patrimonio.Imagem,
                 LocalizacaoID = patrimonio.LocalizacaoID,
-                StatusPatrimonioID = patrimonio.StatusPatrimonioID
+                StatusPatrimonioID = patrimonio.StatusPatrimonioID,
+                StatusPatrimonio = patrimonio.StatusPatrimonio.NomeStatus,
+                LocalNome = patrimonio.Localizacao.NomeLocal
             }).ToList();
 
             return patrimoniosDto;
@@ -54,7 +56,9 @@ namespace GestaoPatrimonios.Applications.Services
                 Valor = patrimonio.Valor,
                 Imagem = patrimonio.Imagem,
                 LocalizacaoID = patrimonio.LocalizacaoID,
-                StatusPatrimonioID = patrimonio.StatusPatrimonioID
+                LocalNome = patrimonio.Localizacao.NomeLocal,
+                StatusPatrimonioID = patrimonio.StatusPatrimonioID,
+                StatusPatrimonio = patrimonio.StatusPatrimonio.NomeStatus
             };
 
             return patrimonioDto;
